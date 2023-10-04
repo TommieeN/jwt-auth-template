@@ -75,22 +75,25 @@ curl -X POST http://localhost:8080/api/users/register -H "Content-Type: applicat
   "email": "johndoe@example.com",
   "password": "your_secure_password"
 }'
-
+```
 ### Login with User
 
+```bash
 curl -X POST http://localhost:8080/api/users/login -H "Content-Type: application/json" -d '{
   "email": "johndoe@example.com",
   "password": "your_secure_password"
 }'
+```
 
 You'll receive a JSON response containing a JWT token. You can use this token for authenticated requests.
 
 ### Make an Authenticated Request
 Replace <JWT_TOKEN_HERE> with the JWT token obtained from the login step:
 
-bash
-Copy code
+```bash
 curl -X GET http://localhost:8080/api/users/current -H "Authorization: Bearer <JWT_TOKEN_HERE>"
+```
+
 This will retrieve information about the currently authenticated user.
 
 Feel free to adapt and expand this section with specific examples and explanations relevant to your server's use cases.
