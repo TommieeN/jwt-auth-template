@@ -93,8 +93,4 @@ Replace <JWT_TOKEN_HERE> with the JWT token obtained from the login step:
 ```bash
 curl -X GET http://localhost:8080/api/users/current -H "Authorization: Bearer <JWT_TOKEN_HERE>"
 ```
-
 This will retrieve information about the currently authenticated user.
-
-Feel free to adapt and expand this section with specific examples and explanations relevant to your server's use cases.
-```
