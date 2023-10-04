@@ -34,21 +34,21 @@ To launch the server locally, follow these steps:
 
 1. Clone this repository:
 
-   ```bash
-   git clone https://github.com/yourusername/jwt-authentication-server.git
-   ```
+```bash
+git clone https://github.com/yourusername/jwt-authentication-server.git
+```
 
 2. cd jwt-authentication-server
 
 ```bash
-    npm install
+npm install
 
 ```
 
 3.Set up environment variables: Create a .env file in the project root and define these variables:
 
 ```bash
-    PORT=8080
+PORT=8080
 DB_HOST=your_database_host
 DB_USER=your_database_user
 DB_PASSWORD=your_database_password
@@ -76,6 +76,7 @@ curl -X POST http://localhost:8080/api/users/register -H "Content-Type: applicat
   "password": "your_secure_password"
 }'
 ```
+
 ### Login with User
 
 ```bash
@@ -88,9 +89,11 @@ curl -X POST http://localhost:8080/api/users/login -H "Content-Type: application
 You'll receive a JSON response containing a JWT token. You can use this token for authenticated requests.
 
 ### Make an Authenticated Request
+
 Replace <JWT_TOKEN_HERE> with the JWT token obtained from the login step:
 
 ```bash
 curl -X GET http://localhost:8080/api/users/current -H "Authorization: Bearer <JWT_TOKEN_HERE>"
 ```
+
 This will retrieve information about the currently authenticated user.
